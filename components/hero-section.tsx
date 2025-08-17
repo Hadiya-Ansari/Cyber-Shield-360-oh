@@ -142,7 +142,7 @@ export function HeroSection() {
             </motion.p>
 
             <motion.p
-              className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg text-gray-100 mb-8 max-w-2xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -219,14 +219,14 @@ export function HeroSection() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-lg"
-                    animate={{ opacity: [0.3, 0.6, 0.3] }}
+                    className="absolute inset-0 bg-slate-800 rounded-lg border border-cyan-500"
+                    animate={{ opacity: [0.8, 1, 0.8] }}
                     transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: index * 0.5 }}
                   />
                   <div className="relative p-3">
                     <stat.icon className="h-4 w-4 text-cyan-400 mx-auto lg:mx-0 mb-1" />
                     <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-sm text-gray-100">{stat.label}</div>
                   </div>
                 </motion.div>
               ))}
@@ -242,14 +242,14 @@ export function HeroSection() {
           >
             <div className="relative w-full max-w-2xl mx-auto h-96 flex items-center justify-center">
               <motion.div
-                className="relative z-10 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full p-8 backdrop-blur-sm border border-cyan-400/30"
+                className="relative z-10 bg-slate-800 rounded-full p-8 backdrop-blur-sm border-2 border-cyan-400"
                 animate={{
                   scale: [1, 1.05, 1],
                   rotate: [0, 5, -5, 0],
                   boxShadow: [
-                    "0 0 20px rgba(34, 211, 238, 0.3)",
-                    "0 0 40px rgba(34, 211, 238, 0.5)",
-                    "0 0 20px rgba(34, 211, 238, 0.3)",
+                    "0 0 20px rgba(34, 211, 238, 0.8)",
+                    "0 0 40px rgba(34, 211, 238, 1)",
+                    "0 0 20px rgba(34, 211, 238, 0.8)",
                   ],
                 }}
                 transition={{
@@ -262,7 +262,7 @@ export function HeroSection() {
 
                 {/* Inner rotating elements */}
                 <motion.div
-                  className="absolute inset-4 border border-cyan-400/20 rounded-full"
+                  className="absolute inset-4 border-2 border-cyan-400 rounded-full"
                   animate={{ rotate: -360 }}
                   transition={{ duration: 15, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 />
@@ -290,30 +290,23 @@ export function HeroSection() {
                   }}
                 >
                   <motion.div
-                    className={`w-16 h-16 rounded-full bg-slate-800 backdrop-blur-sm border-2 border-cyan-400 flex items-center justify-center ${color} shadow-2xl`}
+                    className={`w-16 h-16 rounded-full bg-slate-800 border-2 border-cyan-400 flex items-center justify-center ${color}`}
                     style={{
                       transform: `translateX(${radius}px)`,
-                      boxShadow: `0 0 25px rgba(34, 211, 238, 0.6), 0 0 50px rgba(34, 211, 238, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.5)`,
+                      boxShadow: `0 0 25px rgba(34, 211, 238, 1), 0 0 50px rgba(34, 211, 238, 0.8)`,
                     }}
                     whileHover={{
                       scale: 1.4,
                       rotate: 180,
-                      boxShadow:
-                        "0 0 40px rgba(34, 211, 238, 0.9), 0 0 80px rgba(34, 211, 238, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.7)",
+                      boxShadow: "0 0 40px rgba(34, 211, 238, 1), 0 0 80px rgba(34, 211, 238, 1)",
                     }}
                     animate={{
                       y: [0, -15, 0],
                       scale: [1, 1.1, 1],
-                      boxShadow: [
-                        "0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.4)",
-                        "0 0 30px rgba(34, 211, 238, 0.8), 0 0 60px rgba(34, 211, 238, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.6)",
-                        "0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.4)",
-                      ],
                     }}
                     transition={{
                       y: { duration: 2.5, repeat: Number.POSITIVE_INFINITY, delay: index * 0.3 },
                       scale: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: index * 0.4 },
-                      boxShadow: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: index * 0.5 },
                     }}
                   >
                     <Icon className="h-8 w-8" />
@@ -386,7 +379,7 @@ export function HeroSection() {
               Why Choose Cyber Shield 360?
             </motion.h3>
             <motion.p
-              className="text-lg text-gray-300 max-w-2xl mx-auto"
+              className="text-lg text-gray-100 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.2, duration: 0.6 }}
@@ -410,12 +403,10 @@ export function HeroSection() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="h-full"
               >
-                <Card
-                  className={`bg-gradient-to-br ${highlight.color} ${highlight.borderColor} transition-all duration-300 h-full backdrop-blur-sm`}
-                >
+                <Card className={`bg-slate-800 border-2 ${highlight.borderColor} transition-all duration-300 h-full`}>
                   <CardContent className="p-6 text-center">
                     <motion.div
-                      className={`w-16 h-16 rounded-full bg-slate-800/50 flex items-center justify-center mx-auto mb-4`}
+                      className={`w-16 h-16 rounded-full bg-slate-700 flex items-center justify-center mx-auto mb-4`}
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >
@@ -423,7 +414,7 @@ export function HeroSection() {
                     </motion.div>
 
                     <h4 className="text-lg font-bold text-white mb-3">{highlight.title}</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">{highlight.description}</p>
+                    <p className="text-gray-100 text-sm leading-relaxed">{highlight.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>

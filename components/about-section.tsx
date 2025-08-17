@@ -49,7 +49,7 @@ export function AboutSection() {
   ]
 
   return (
-    <SectionWrapper id="about" className="bg-slate-900/50">
+    <SectionWrapper id="about" className="bg-slate-900">
       <div className="text-center mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export function AboutSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">About Cyber Awareness</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto mb-8">
             Understanding cyber security is no longer optional—it's essential for everyone in our digital world.
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export function AboutSection() {
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         viewport={{ once: true }}
       >
-        <Card className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-cyan-400/40 backdrop-blur-sm relative overflow-hidden">
+        <Card className="bg-slate-800 border-2 border-cyan-400 backdrop-blur-sm relative overflow-hidden">
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"
             animate={{
@@ -152,7 +152,7 @@ export function AboutSection() {
                 About Cyber Shield 360
               </motion.h3>
               <motion.p
-                className="text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto"
+                className="text-xl text-white leading-relaxed max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -163,48 +163,27 @@ export function AboutSection() {
               </motion.p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Target className="h-8 w-8 text-cyan-400" />
-                  </div>
-                  <h4 className="font-semibold text-white mb-2">Comprehensive</h4>
-                  <p className="text-sm text-gray-300">360-degree approach to cyber security education</p>
-                </motion.div>
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Globe className="h-8 w-8 text-blue-400" />
-                  </div>
-                  <h4 className="font-semibold text-white mb-2">Connected World</h4>
-                  <p className="text-sm text-gray-300">Addressing modern digital connectivity challenges</p>
-                </motion.div>
-                <motion.div
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <BookOpen className="h-8 w-8 text-purple-400" />
-                  </div>
-                  <h4 className="font-semibold text-white mb-2">Educational</h4>
-                  <p className="text-sm text-gray-300">Knowledge and tools for everyone</p>
-                </motion.div>
+                {[
+                  { icon: Target, title: "Comprehensive", desc: "360-degree approach to cyber security education" },
+                  { icon: Globe, title: "Connected World", desc: "Addressing modern digital connectivity challenges" },
+                  { icon: BookOpen, title: "Educational", desc: "Knowledge and tools for everyone" },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <item.icon className="h-8 w-8 text-cyan-400" />
+                    </div>
+                    <h4 className="font-semibold text-white mb-2">{item.title}</h4>
+                    <p className="text-sm text-gray-100">{item.desc}</p>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </CardContent>
@@ -219,7 +198,7 @@ export function AboutSection() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <Card className="bg-slate-800/50 border-cyan-500/20 backdrop-blur-sm">
+        <Card className="bg-slate-800 border-2 border-cyan-500 backdrop-blur-sm">
           <CardContent className="p-8">
             <div className="flex items-center mb-6">
               <motion.div
@@ -230,57 +209,39 @@ export function AboutSection() {
               </motion.div>
               <h3 className="text-2xl font-bold text-white">What is Cyber Security?</h3>
             </div>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <p className="text-lg text-gray-100 leading-relaxed mb-6">
               Cyber security is the practice of protecting digital information, devices, and networks from unauthorized
               access, theft, or damage. It encompasses everything from securing your personal smartphone to protecting
               critical infrastructure that powers our cities.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <motion.div
-                className="text-center"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              {[
+                { icon: Shield, title: "Protection", desc: "Safeguarding digital assets and personal information" },
+                { icon: Users, title: "Awareness", desc: "Understanding threats and safe practices" },
+                { icon: TrendingUp, title: "Prevention", desc: "Proactive measures to avoid cyber attacks" },
+              ].map((item, index) => (
                 <motion.div
-                  className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-3"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                  key={index}
+                  className="text-center"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Shield className="h-8 w-8 text-cyan-400" />
+                  <motion.div
+                    className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                      delay: index * 0.5,
+                    }}
+                  >
+                    <item.icon className="h-8 w-8 text-cyan-400" />
+                  </motion.div>
+                  <h4 className="font-semibold text-white mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-100">{item.desc}</p>
                 </motion.div>
-                <h4 className="font-semibold text-white mb-2">Protection</h4>
-                <p className="text-sm text-gray-400">Safeguarding digital assets and personal information</p>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <motion.div
-                  className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 }}
-                >
-                  <Users className="h-8 w-8 text-blue-400" />
-                </motion.div>
-                <h4 className="font-semibold text-white mb-2">Awareness</h4>
-                <p className="text-sm text-gray-400">Understanding threats and safe practices</p>
-              </motion.div>
-              <motion.div
-                className="text-center"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <motion.div
-                  className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
-                >
-                  <TrendingUp className="h-8 w-8 text-purple-400" />
-                </motion.div>
-                <h4 className="font-semibold text-white mb-2">Prevention</h4>
-                <p className="text-sm text-gray-400">Proactive measures to avoid cyber attacks</p>
-              </motion.div>
+              ))}
             </div>
           </CardContent>
         </Card>
@@ -305,7 +266,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, rotateY: 5 }}
             >
-              <Card className="bg-slate-800/30 border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 h-full">
+              <Card className="bg-slate-800 border-2 border-cyan-500 hover:border-cyan-400 transition-all duration-300 h-full">
                 <CardContent className="p-6 text-center">
                   <motion.div
                     animate={{ rotate: [0, 10, -10, 0] }}
@@ -315,13 +276,13 @@ export function AboutSection() {
                   </motion.div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-lg font-semibold text-cyan-300 mb-2">{stat.label}</div>
-                  <p className="text-sm text-gray-400">{stat.description}</p>
+                  <p className="text-sm text-gray-100">{stat.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
-        <p className="text-lg text-gray-300 text-center max-w-4xl mx-auto">
+        <p className="text-lg text-gray-100 text-center max-w-4xl mx-auto">
           Every day, millions of people fall victim to cyber crimes. From financial fraud to identity theft, the
           consequences can be devastating. But with proper awareness and simple precautions, most attacks can be
           prevented.
@@ -351,19 +312,19 @@ export function AboutSection() {
               viewport={{ once: true }}
               whileHover={{ y: -5, rotateX: 5 }}
             >
-              <Card className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border-red-500/30 hover:border-red-400/50 transition-all duration-300 h-full">
+              <Card className="bg-slate-800 border-2 border-red-500 hover:border-red-400 transition-all duration-300 h-full">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-lg font-bold text-white">{example.title}</h4>
                     <motion.span
-                      className="text-xs bg-red-500/20 text-red-300 px-2 py-1 rounded-full"
+                      className="text-xs bg-red-600 text-white px-2 py-1 rounded-full"
                       animate={{ pulse: [1, 1.1, 1] }}
                       transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                     >
                       {example.impact}
                     </motion.span>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{example.description}</p>
+                  <p className="text-gray-100 text-sm leading-relaxed">{example.description}</p>
                 </CardContent>
               </Card>
             </motion.div>

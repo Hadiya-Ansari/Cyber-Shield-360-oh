@@ -7,7 +7,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Cyber Shield 360 - Complete Cyber Security Awareness",
   description: "Your comprehensive guide to cyber security awareness, safe practices, and threat protection",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <style>{`
 html {
@@ -26,7 +26,7 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body className="dark bg-slate-900 text-white">{children}</body>
     </html>
   )
 }

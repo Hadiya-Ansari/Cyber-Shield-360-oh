@@ -1,4 +1,4 @@
-# Cyber Shield 360
+# Framer Motion animations
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
