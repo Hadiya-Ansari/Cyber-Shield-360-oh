@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Download, FileText, Star, Users, Shield, Lock, Smartphone, CheckCircle } from "lucide-react"
+import { Download, FileText, Star, Users, Shield, Lock, Smartphone, CheckCircle, Users2, Mail } from "lucide-react"
 
 export function ResourcesSection() {
   const pdfGuides = [
@@ -48,6 +48,24 @@ export function ResourcesSection() {
       icon: Shield,
       color: "from-orange-500/20 to-red-500/20",
       borderColor: "border-orange-500/30",
+    },
+    {
+      title: "Cyberbullying and Online Harassment Guide",
+      description:
+        "Comprehensive guide to understanding, preventing, and responding to cyberbullying and online harassment.",
+      url: "https://drive.google.com/file/d/1aKQOw0YlhqkOgcMTEkbk3qCmo5l9We10/view?usp=drivesdk",
+      icon: Users2,
+      color: "from-indigo-500/20 to-purple-500/20",
+      borderColor: "border-indigo-500/30",
+    },
+    {
+      title: "Phishing and Online Scams",
+      description:
+        "Essential guide to identifying, avoiding, and reporting phishing attempts and various online scams.",
+      url: "https://drive.google.com/file/d/19ijIAM4OWmXY_QA__F01Ib4w_F-clJZs/view?usp=drivesdk",
+      icon: Mail,
+      color: "from-yellow-500/20 to-orange-500/20",
+      borderColor: "border-yellow-500/30",
     },
   ]
 

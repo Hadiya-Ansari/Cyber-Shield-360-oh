@@ -3,35 +3,35 @@
 import { motion } from "framer-motion"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Bug, Users2, Briefcase, ShoppingCart, AlertTriangle } from "lucide-react"
+import { Mail, Users2, Briefcase, ShoppingCart, AlertTriangle, Lock } from "lucide-react"
 
 export function ThreatsSection() {
   const threats = [
     {
-      icon: Mail,
-      title: "Phishing Attacks",
-      subtitle: "Fake Emails & SMS",
+      icon: Lock,
+      title: "Password Security Awareness",
+      subtitle: "Strong Password Practices",
       description:
-        "Criminals send fake messages pretending to be from banks, government agencies, or trusted companies to steal your personal information.",
+        "Understanding the importance of creating and managing strong, unique passwords to protect your digital accounts from unauthorized access.",
       examples: [
-        "Fake bank SMS asking to update KYC details",
-        "Emails claiming your account will be blocked",
-        "Messages with suspicious links or attachments",
+        "Using weak passwords like '123456' or 'password'",
+        "Reusing the same password across multiple accounts",
+        "Sharing passwords through unsecured channels",
       ],
       color: "from-red-500/20 to-pink-500/20",
       borderColor: "border-red-500/30 hover:border-red-400/50",
       iconColor: "text-red-400",
     },
     {
-      icon: Bug,
-      title: "Malware & Ransomware",
-      subtitle: "Malicious Software",
+      icon: Mail,
+      title: "Phishing and Social Engineering Awareness",
+      subtitle: "Recognizing Deceptive Tactics",
       description:
-        "Harmful software that can steal data, spy on activities, or lock your files until you pay a ransom.",
+        "Learning to identify and avoid phishing attempts and social engineering tactics used by cybercriminals to steal personal information.",
       examples: [
-        "Fake antivirus software downloads",
-        "Infected email attachments",
-        "Malicious apps from unknown sources",
+        "Suspicious emails requesting personal information",
+        "Fake phone calls impersonating trusted organizations",
+        "Urgent messages creating false sense of emergency",
       ],
       color: "from-orange-500/20 to-red-500/20",
       borderColor: "border-orange-500/30 hover:border-orange-400/50",
@@ -39,24 +39,29 @@ export function ThreatsSection() {
     },
     {
       icon: Users2,
-      title: "Social Engineering",
-      subtitle: "Psychological Manipulation",
+      title: "Social Media Privacy Awareness",
+      subtitle: "Protecting Your Digital Identity",
       description:
-        "Attackers manipulate people into revealing confidential information or performing actions that compromise security.",
-      examples: ["Fake tech support calls", "Impersonating bank officials", "Creating false urgency or fear"],
+        "Understanding privacy settings and safe practices on social media platforms to protect personal information from misuse.",
+      examples: [
+        "Oversharing personal information publicly",
+        "Accepting friend requests from strangers",
+        "Using weak privacy settings on social accounts",
+      ],
       color: "from-purple-500/20 to-blue-500/20",
       borderColor: "border-purple-500/30 hover:border-purple-400/50",
       iconColor: "text-purple-400",
     },
     {
       icon: Briefcase,
-      title: "Fake Job Offers",
-      subtitle: "Employment Scams",
-      description: "Fraudsters post fake job opportunities to collect personal information or demand upfront payments.",
+      title: "Public Wifi and Device Security Awareness",
+      subtitle: "Safe Connection Practices",
+      description:
+        "Learning secure practices when using public Wi-Fi networks and maintaining device security to prevent data breaches.",
       examples: [
-        "Work-from-home scams requiring fees",
-        "Fake recruitment agencies",
-        "Jobs asking for bank details upfront",
+        "Connecting to unsecured public Wi-Fi networks",
+        "Not using VPN on public connections",
+        "Leaving devices unlocked in public spaces",
       ],
       color: "from-blue-500/20 to-cyan-500/20",
       borderColor: "border-blue-500/30 hover:border-blue-400/50",
@@ -64,10 +69,15 @@ export function ThreatsSection() {
     },
     {
       icon: ShoppingCart,
-      title: "Online Shopping Fraud",
-      subtitle: "E-commerce Scams",
-      description: "Fake online stores, counterfeit products, or payment frauds that target online shoppers.",
-      examples: ["Websites with too-good-to-be-true deals", "Fake payment gateways", "Non-delivery of purchased items"],
+      title: "CyberBullying And Online Harassment Awareness",
+      subtitle: "Digital Safety & Respect",
+      description:
+        "Understanding cyberbullying, online harassment, and learning how to protect yourself and others in digital spaces.",
+      examples: [
+        "Receiving threatening or abusive messages online",
+        "Being targeted by coordinated harassment campaigns",
+        "Experiencing identity theft or impersonation",
+      ],
       color: "from-green-500/20 to-teal-500/20",
       borderColor: "border-green-500/30 hover:border-green-400/50",
       iconColor: "text-green-400",
@@ -83,9 +93,9 @@ export function ThreatsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">Common Cyber Threats</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-6">Awareness Topics</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Know your enemy. Understanding these common threats is the first step to protecting yourself.
+            Stay informed. Understanding these awareness topics is crucial for protecting yourself in the digital world.
           </p>
         </motion.div>
       </div>
