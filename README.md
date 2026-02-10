@@ -62,4 +62,5 @@ Cyber Shield 360 is a *demo and educational project only*.
 
 This project was developed with the assistance of modern AI-based development
 tools to enhance productivity and UI creation, while all customization,
-structure, and project decisions were made by the author.
+structure, and project decisions were made by the author. This project is currently under development and may contain
+incomplete features or known issues.
