@@ -58,6 +58,7 @@ Cyber Shield 360 is a *demo and educational project only*.
 
 *Hadiya Ansari*  
 
+## Note
 
 This project was developed with the assistance of modern AI-based development
 tools to enhance productivity and UI creation, while all customization,
