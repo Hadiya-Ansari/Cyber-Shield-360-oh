@@ -1,30 +1,64 @@
-# Framer Motion animations
+# Cyber Shield 360
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Cyber Shield 360 is aawareness-based demo website created to promote
+cybersecurity best practices and digital safety awareness.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/ansarihadiya2021-3566s-projects/v0-cyber-shield-360)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/HcLwDvsqbGH)
+The project focuses on educating users about common cyber threats, safe online
+practices, and important cybersecurity resources. This website is built purely
+for academic and project demonstration purposes and is not an official or
+commercial cybersecurity service.
 
-## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 🎯 Project Purpose
 
-## Deployment
+- Spread awareness about cybersecurity threats
+- Educate users on safe digital practices
+- Share important cybersecurity helpline numbers and resources
+- Demonstrate frontend development and UI skills
 
-Your project is live at:
+---
 
-**[https://vercel.com/ansarihadiya2021-3566s-projects/v0-cyber-shield-360](https://vercel.com/ansarihadiya2021-3566s-projects/v0-cyber-shield-360)**
+## ✨ Features
 
-## Build your app
+- Informational sections on cybersecurity threats
+- Safe online practices and awareness content
+- Cybersecurity helpline and resource information
+- Interactive and animated UI
+- Fully responsive design for all devices
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/projects/HcLwDvsqbGH](https://v0.app/chat/projects/HcLwDvsqbGH)**
+## 🛠️ Tech Stack
 
-## How It Works
+- TypeScript
+- JavaScript
+- HTML
+- CSS
+- Tailwind CSS
+- Framer Motion
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+---
+
+🔗 Live Demo:  
+https://cybershield360.netlify.app/
+
+---
+
+## ⚠️ Disclaimer
+
+Cyber Shield 360 is a *demo and educational project only*.
+
+- This website does not provide real-time cybersecurity services
+- Information shared is for awareness and learning purposes
+- It should not be considered an official or government cybersecurity platform
+
+---
+
+## 👩‍💻 Author
+
+*Hadiya Ansari*  
+
+
+This project was developed with the assistance of modern AI-based development
+tools to enhance productivity and UI creation, while all customization,
+structure, and project decisions were made by the author.
